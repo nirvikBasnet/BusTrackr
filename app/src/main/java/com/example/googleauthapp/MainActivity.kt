@@ -8,6 +8,7 @@ import com.example.googleauthapp.navigation.SetupNavGraph
 import com.example.googleauthapp.ui.theme.GoogleAuthAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
