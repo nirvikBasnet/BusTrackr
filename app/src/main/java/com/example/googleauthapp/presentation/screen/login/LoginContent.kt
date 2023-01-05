@@ -68,12 +68,3 @@ fun CentralContent(
         onClick = onButtonClicked
             )
 }
-
-@Composable
-@Preview(showBackground = true, showSystemUi = true)
-fun LoginContentPreview(){
-    LoginContent(
-        signedInState = false,
-        messageBarState = MessageBarState(),
-        onButtonClicked = {})
-}

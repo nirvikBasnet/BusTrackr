@@ -43,7 +43,7 @@ fun GoogleButton(
     }
 
     Surface(modifier = modifier
-        .clickable(enabled = loadingState) {
+        .clickable(enabled = !loadingState) {
             onClick()
         },
         shape = shape,
@@ -79,14 +79,6 @@ fun GoogleButton(
             }
 
         }
-
-    }
-}
-
-@Composable
-@Preview
-fun GoogleButtonPreview(){
-    GoogleButton {
 
     }
 }

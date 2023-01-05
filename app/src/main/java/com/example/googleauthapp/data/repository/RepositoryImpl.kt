@@ -8,7 +8,7 @@ import javax.inject.Inject
 class RepositoryImpl @Inject constructor(
     private val dataStoreOperations: DataStoreOperations
 ): Repository {
-    override suspend fun signedInState(signedIn: Boolean) {
+    override suspend fun saveSignedInState(signedIn: Boolean) {
         dataStoreOperations.saveSignedInState(signedIn = signedIn)
     }
 
