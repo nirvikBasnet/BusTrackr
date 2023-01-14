@@ -37,7 +37,7 @@ fun StartActivityForResult(
                 if(tokenId != null){
                     onResultReceived(tokenId)
                 }else{
-
+                    Log.d("StartActivityForResult", "CLOSED")
                     onDialogDismissed()
                 }
             }
@@ -54,7 +54,7 @@ fun StartActivityForResult(
 
                  else -> {
 
-                         Log.d("StartActivityForResult", "${e.message}")
+                         Log.d("StartActivityForResult", "Error : ${e.message}")
                          onDialogDismissed()
 
                  }
@@ -99,7 +99,7 @@ fun signIn(
 
         }
         .addOnFailureListener{
-            Log.d("SignIn", "Signing Up...")
+            Log.d("SignIn", "Signing Up... : ${it.message}")
             signup(
                 activity,
                 launchActivityResult,

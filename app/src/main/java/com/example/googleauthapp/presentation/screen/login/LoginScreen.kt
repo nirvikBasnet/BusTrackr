@@ -2,6 +2,7 @@ package com.example.googleauthapp.presentation.screen.login
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.util.Log
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -41,6 +42,7 @@ fun LoginScreen(navController: NavController, loginViewModel: LoginViewModel = h
         signedInState,
         onResultReceived = {
             tokenId ->
+            Log.d("StartActivityForResult", tokenId)
 
         },
         onDialogDismissed = {
@@ -55,6 +57,7 @@ fun LoginScreen(navController: NavController, loginViewModel: LoginViewModel = h
                 },
                 accountNotFound = {
                     loginViewModel.saveSignedInState(false)
+                    loginViewModel.updateMessageBarState()
                 }
             )
         }
